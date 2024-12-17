@@ -6,12 +6,15 @@ import time
 def run_backend():
     """Chạy backend FastAPI"""
     print("Starting backend...")
-    subprocess.Popen(["uvicorn", "backend.app:app", "--reload"])
+    try:
+        subprocess.Popen(["uvicorn", "backend.app:app", "--reload"])
+    except Exception as e:
+        print(f"Error starting backend: {e}")
 
 def run_frontend():
     """Mở frontend trong trình duyệt"""
     print("Opening frontend in browser...")
-    time.sleep(2)  # Đợi 2 giây để backend khởi động
+    time.sleep(2)  # Đợi backend khởi động
     webbrowser.open("http://localhost:8000/")
 
 def main():

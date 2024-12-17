@@ -1,0 +1,18 @@
+/* Đảm bảo body và html có chiều cao 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Đảm bảo không bị cuộn khi ảnh không đủ chiều */
+}
+
+/* Thẻ img sẽ là ảnh nền */
+#background-img {
+    position: absolute; /* Đảm bảo ảnh nền ở phía dưới */
+    top: 0;
+    left: 0;
+    width: 100%;  /* Chiếm hết chiều rộng màn hình */
+    height: 100%; /* Chiếm hết chiều cao màn hình */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo mà phủ toàn bộ màn hình */
+    z-index: -1; /* Đặt ảnh nền dưới các phần tử khác */
+}
