@@ -1,0 +1,7 @@
+.venv/
+*.pyc
+.storage/
+app.log
+myenv/
+.idea/
+.env
