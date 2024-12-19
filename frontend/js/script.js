@@ -20,7 +20,7 @@ function nextPage() {
 
     // Bắt đầu phát video
     video.play();
-
+    document.getElementById("skip").style.display = "block";
     const targetTime = 19; // Giây muốn video chạy đến trước khi chuyển trang
     const checkTime = () => {
         if (video.currentTime >= targetTime) {
@@ -31,4 +31,8 @@ function nextPage() {
 
     // Theo dõi thời gian video
     video.addEventListener("timeupdate", checkTime);
+}
+
+function skipVideo(){
+    window.location.href = "/tool";
 }

@@ -9,19 +9,23 @@ app = FastAPI()
 frontend_path = os.path.join(os.path.dirname(__file__), "../frontend")
 app.mount("/frontend", StaticFiles(directory=frontend_path), name="frontend")
 
+templates_path = os.path.join(os.path.dirname(__file__), "../frontend/templates")
+
+
 @app.get("/", response_class=HTMLResponse)
 async def serve_index():
-    with open(os.path.join(frontend_path, "index.html"), "r") as f:
+    with open(os.path.join(templates_path, "index.html"), "r") as f:
+
         return f.read()
 
 @app.get("/tool", response_class=HTMLResponse)
 async def serve_index():
-    with open(os.path.join(frontend_path, "tool.html"), "r") as f:
+    with open(os.path.join(templates_path, "tool.html"), "r") as f:
         return f.read()
     
 @app.get("/contact", response_class=HTMLResponse)
 async def serve_index():
-    with open(os.path.join(frontend_path, "contact.html"), "r") as f:
+    with open(os.path.join(templates_path, "contact.html"), "r") as f:
         return f.read()
 
 
