@@ -4,6 +4,9 @@ body, html {
     margin: 0;
     padding: 0;
     overflow: hidden; /* Đảm bảo không bị cuộn khi ảnh không đủ chiều */
+    display: flex;            /* Sử dụng Flexbox để bố trí các phần tử */
+    justify-content: center;  /* Căn giữa các phần tử con theo chiều ngang */
+    align-items: center;  
 }
 
 /* Thẻ img sẽ là ảnh nền */
@@ -15,4 +18,77 @@ body, html {
     height: 100%; /* Chiếm hết chiều cao màn hình */
     object-fit: cover; /* Đảm bảo ảnh không bị méo mà phủ toàn bộ màn hình */
     z-index: -1; /* Đặt ảnh nền dưới các phần tử khác */
+}
+
+#div-container {
+    display: flex;
+    justify-content: space-evenly;  /* Căn chỉnh đều các phần tử trong container */
+    align-items: center;           /* Căn chỉnh các phần tử theo chiều dọc */
+    position: fixed;
+    bottom: 20px;  /* Cách đáy trang 20px */
+    left: 0;
+    width: 100%;
+    z-index: 1;   /* Đảm bảo container này nằm trên ảnh nền */
+}
+
+/* Kiểu dáng cho các div trong container */
+.footer-div {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
+    padding: 20px;
+    font-size: 16px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer-div:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
+.center {
+    flex-direction: column;
+    display: flex; 
+    justify-content: center;  
+    align-items: center;      
+    gap: 0px;             
+}
+
+.info-web, .info-sdt {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-web{
+    width: 500px;
+    height: 50px;
+
+}
+
+
+/* Thêm hiệu ứng hover nếu cần */
+.info-web:hover, .info-sdt:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.back-home {
+    position: absolute;  /* Đảm bảo phần tử có thể được định vị */
+    top: 10px;           /* Cách đỉnh trang 10px */
+    right: 10px;         /* Cách bên phải 10px */
+    padding: 10px 20px;  /* Thêm padding để tạo không gian xung quanh văn bản */
+    background-color: rgba(255, 255, 255, 0.7);  /* Màu nền cho nút */
+    color: black;        /* Màu chữ */
+    border: none;        /* Bỏ border */
+    border-radius: 5px;  /* Bo góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Đổ bóng */
+    cursor: pointer;    /* Thêm con trỏ khi hover */
+}
+
+.back-home:hover {
+    background-color: rgba(255, 255, 255, 1);  /* Thay đổi màu nền khi hover */
 }
