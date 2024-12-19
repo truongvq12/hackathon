@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="/frontend/css/tool.css">
-</head>
-<body>
-    <div id="background-image"></div>
+{% extends "base.html" %}
 
+{% block title %}Tool{% endblock %}
 
-    <button class="back-home" onclick="backHome()">Back to Home</button>
-    <button class="to-contact" onclick="goContact()">GO to contact</button>
-</body>
-</html>
-
-<script src="/frontend/js/tool.js"></script>
+{% block content %}
+<h1>Tool Page</h1>
+<p>Welcome to the Tool page.</p>
+{% endblock %}

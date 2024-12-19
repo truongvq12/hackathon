@@ -1,3 +1,3 @@
-function backHome(){
-    window.location.href = "/";
+function backTool(){
+    window.location.href = "/tool";
 }

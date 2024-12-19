@@ -4,4 +4,3 @@ venv/
 app.log
 myenv/
 .idea/
-.env
