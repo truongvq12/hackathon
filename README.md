@@ -6,4 +6,5 @@
     pip install fastapi uvicorn
 
 2. dùng câu lệnh để run
+    python run.py
     
