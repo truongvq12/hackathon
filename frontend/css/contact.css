@@ -7,6 +7,8 @@ body, html {
     display: flex;            /* Sử dụng Flexbox để bố trí các phần tử */
     justify-content: center;  /* Căn giữa các phần tử con theo chiều ngang */
     align-items: center;  
+
+
 }
 
 /* Thẻ img sẽ là ảnh nền */
@@ -31,23 +33,6 @@ body, html {
     z-index: 1;   /* Đảm bảo container này nằm trên ảnh nền */
 }
 
-/* Kiểu dáng cho các div trong container */
-.footer-div {
-    background-color: rgba(255, 255, 255, 0.7);
-    color: black;
-    padding: 20px;
-    font-size: 16px;
-    width: 300px;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.footer-div:hover {
-    background-color: rgba(255, 255, 255, 1);
-}
-
-
 .center {
     flex-direction: column;
     display: flex; 
@@ -57,8 +42,8 @@ body, html {
 }
 
 .info-web, .info-sdt {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+
     font-size: 16px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -67,13 +52,52 @@ body, html {
 .info-web{
     width: 500px;
     height: 50px;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    /* border-radius: 100% 0% 88% 12% / 0% 100% 0% 100% ; */
+    clip-path: polygon(100% 0, 100% 100%, 5% 100%, 0 64%, 0 0);
+    background-color: rgba(64, 67, 66, 0.7);
+    padding: 20px;
+}
+
+.info-sdt{
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-left: auto;
+    height: 50px;
+    width: 180px;
+    text-align: center;
+    display: flex; /* Kích hoạt Flexbox */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding-right: 10px !important; /* Bỏ padding */
+    font-size: 20px;
 
 }
 
-
+.info-sdt:before {
+    content: ""; /* Cần để trống khi thêm ảnh */
+    display: inline-block; /* Hiển thị ảnh */
+    width: 50px; /* Chiều rộng ảnh */
+    height: 50px; /* Chiều cao ảnh */
+    background-image: url('/frontend/images/phone.png'); /* Đường dẫn đến ảnh */
+    background-size: cover; /* Đảm bảo ảnh vừa khung */
+    background-position: center; /* Canh giữa ảnh */
+    margin-right: 10px; 
+    border-radius: 10%;
+}
 /* Thêm hiệu ứng hover nếu cần */
-.info-web:hover, .info-sdt:hover {
+.info-sdt:hover,
+.fb-logo:hover, 
+.twitter-logo:hover, 
+.instagram-logo:hover{
     background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+.info-web:hover {
+    background-color: rgb(140, 136, 136);
+    cursor: pointer;
 }
 
 .back-home {
@@ -91,4 +115,48 @@ body, html {
 
 .back-home:hover {
     background-color: rgba(255, 255, 255, 1);  /* Thay đổi màu nền khi hover */
+}
+
+.fb-logo, .twitter-logo, .instagram-logo{
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 50px;
+    width: 250px;
+    text-align: center;
+    display: flex; /* Kích hoạt Flexbox */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding-right: 95px !important; /* Bỏ padding */
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+
+.fb-logo:before{
+    content: ""; /* Cần để trống khi thêm ảnh */
+    display: inline-block; /* Hiển thị ảnh */
+    width: 50px; /* Chiều rộng ảnh */
+    height: 50px; /* Chiều cao ảnh */
+    background-image: url('/frontend/images/icons8-facebook-logo-48.png'); /* Đường dẫn đến ảnh */
+    background-size: cover; /* Đảm bảo ảnh vừa khung */
+    margin-right: 92px; 
+}
+
+.twitter-logo:before{
+    content: ""; /* Cần để trống khi thêm ảnh */
+    display: inline-block; /* Hiển thị ảnh */
+    width: 50px; /* Chiều rộng ảnh */
+    height: 50px; /* Chiều cao ảnh */
+    background-image: url('/frontend/images/Twitter-X-Logo-Vector-01-2.jpg'); /* Đường dẫn đến ảnh */
+    background-size: cover; /* Đảm bảo ảnh vừa khung */
+    margin-right: 103px; 
+}
+
+.instagram-logo:before{
+    content: ""; /* Cần để trống khi thêm ảnh */
+    display: inline-block; /* Hiển thị ảnh */
+    width: 50px; /* Chiều rộng ảnh */
+    height: 50px; /* Chiều cao ảnh */
+    background-image: url('/frontend/images/Instagram-Logo.wine.png'); /* Đường dẫn đến ảnh */
+    background-size: cover; /* Đảm bảo ảnh vừa khung */
+    margin-right: 95px; 
 }
