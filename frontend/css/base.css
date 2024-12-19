@@ -141,6 +141,10 @@ body {
     background-color: #fff;
     min-height: 100vh;
     margin-top: 60px; /* Đảm bảo không bị che bởi navbar */
+    /* background-image: url("/frontend/images/khung-noel.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;  */
 }
 
 @media (max-width: 768px) {
