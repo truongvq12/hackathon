@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scuti AI</title>
+    <link rel="stylesheet" href="/frontend/css/base.css">
+    <link rel="icon" href="/frontend/images/image-removebg-preview.png" type="image/png">
+</head>
+<body>
+    {% if show_nav %}
+    <div class="navbar">
+        <div class="hamburger" onclick="toggleSidebar()">☰</div> <!-- Biểu tượng hamburger -->
+        
+        <span class="logo">Scuti</span>
+        <div class="navbar-buttons">
+            <button onclick="backHome()">Home</button>
+            <button onclick="goContact()">Contact</button>
+        </div>
+    </div>
+    
+    {% endif %}
+
+    {% if show_sidebar %}
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-logo">Tools</span>
+        </div>
+        <button onclick="navigateTo('tool')">Tool</button>
+        <button onclick="navigateTo('tool1')">Tool 1</button>
+        <button onclick="navigateTo('tool2')">Tool 2</button>
+        <button onclick="navigateTo('tool3')">Tool 3</button>
+    </div>
+    {% endif %}
+
+    <div class="content">
+        {% block content %}
+        <!-- Nội dung động của từng trang -->
+        {% endblock %}
+    </div>
+
+    <script src="/frontend/js/base.js"></script>
+</body>
+</html>

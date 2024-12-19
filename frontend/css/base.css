@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f4f4f4; */
+    /* background-image: url("/frontend/images/background.png"); */
+
+}
+
+.logo:before {
+    content: "";
+    display: inline-block;
+    width: 40px; /* Kích thước ảnh */
+    height: 40px; /* Kích thước ảnh */
+    background-image: url('/frontend/images/image-removebg-preview.png'); /* Đường dẫn đến hình ảnh */
+    background-size: contain; /* Giữ tỉ lệ của hình ảnh */
+    background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+    margin-left: 70px; /* Khoảng cách giữa logo và ảnh */
+    margin-top: -10px;
+    position:absolute;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 15px 20px;
+    color: white;
+    width: 100%; /* Làm cho navbar rộng hết màn hình */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Đặt navbar cố định ở trên cùng */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Đảm bảo navbar luôn hiển thị trên cùng */
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.navbar .navbar-buttons button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar .navbar-buttons button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+
+.sidebar-header{
+    margin-top: 50px;
+}
+
+.navbar-buttons{
+    margin-right: 50px;
+}
+
+/* Biểu tượng hamburger */
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    display: block; /* Ẩn biểu tượng hamburger mặc định */
+    color: white;  /* Đảm bảo màu chữ trắng để dễ nhìn */
+    padding: 10px;
+    transition: transform 0.3s ease;
+    position:absolute;
+    margin-left: -15px;
+}
+
+.hamburger:hover {
+    transform: scale(1.1); /* Tạo hiệu ứng khi hover */
+}
+
+
+.sidebar {
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #34495e;
+    padding-top: 20px;
+    transition: 0.3s;
+    overflow-x: hidden;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(0px); /* Ẩn sidebar khi bắt đầu */
+    z-index: 0; /* Đảm bảo sidebar không che navbar */
+}
+
+.sidebar.open {
+    transform: translateX(0px); /* Hiển thị sidebar khi có class "open" */
+}
+
+.sidebar.close {
+    transform: translateX(-260px); /* Hiển thị sidebar khi có class "open" */
+}
+
+.sidebar .sidebar-header {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background-color: #2c3e50;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 12px 15px;
+    background: none;
+    border: none;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar button:hover {
+    background-color: #1abc9c;
+    transform: translateX(5px);
+}
+
+.content {
+    margin-left: 260px;
+    padding: 20px;
+    background-color: #fff;
+    min-height: 100vh;
+    margin-top: 60px; /* Đảm bảo không bị che bởi navbar */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .navbar-buttons {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+
+    .navbar .navbar-buttons button {
+        margin-left: 0;
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        transform: translateX(-100%); /* Ẩn sidebar khi bắt đầu trên màn nhỏ */
+    }
+
+    .sidebar.open {
+        transform: translateX(0); /* Hiển thị sidebar khi có class "open" */
+    }
+
+    .content {
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    /* Hiển thị hamburger trên màn hình nhỏ */
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: 20px;  /* Đặt biểu tượng hamburger gần bên trái */
+        top: 50%;
+        transform: translateY(-50%); /* Căn giữa theo chiều dọc */
+        z-index: 2; /* Đảm bảo hamburger luôn nằm trên navbar */
+    }
+}
