@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-    color: #4CAF50;
+    color: white;
 }
 
 #message {
@@ -59,4 +59,25 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+#logo-img {
+    width: 500px !important; 
+    height: auto;  
+    border-radius: 50%;
+}
+
+#skip {
+    position: absolute;
+    top: 5px; 
+    right:  20px; 
+    font-size: 16px; 
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: none;
+}
+#skip:hover{
+    font-size: 20px;
+    cursor: pointer;
+    color:#4CAF50
 }

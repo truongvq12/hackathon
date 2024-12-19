@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web App</title>
-    <link rel="stylesheet" href="/frontend/style.css">
+    <link rel="stylesheet" href="/frontend/css/style.css">
 </head>
 <body>
     <video id="background-video" autoplay muted loop>
-        <source src="/frontend/background.mp4" type="video/mp4">
+        <source src="/frontend/images/background.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <div id="contents">
         <h1>Welcome to My Web App</h1>
         <div id="message"></div>
         <div id="logo-and-button">
-            <img id="logo-img" src="/frontend/logo1.png" alt="Logo">
-            <button onclick="nextPage()">Next page</button>
+            <img id="logo-img" src="/frontend/images/LOGO SCUTI.jpg" alt="Logo">
+            <button onclick="nextPage()">LOGIN</button>
         </div>
     </div>
+    <button id="skip" onclick="skipVideo()"> skip </button>
 </body>
 </html>
-<script src="/frontend/script.js"></script>
+<script src="/frontend/js/script.js"></script>
