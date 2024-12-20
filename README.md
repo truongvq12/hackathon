@@ -1,7 +1,7 @@
 1. cài 
     cài python 3.11.8
 
-    python -m venv venv
+    python -m venv myenv
     myenv/Scripts/activate
 
     pip install fastapi uvicorn
