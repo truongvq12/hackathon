@@ -7,7 +7,11 @@
     pip install fastapi uvicorn
     
     pip install uvicorn
+   
+    pip install python-dotenv
 
-2. dùng câu lệnh để run
+    pip install openai
+
+3. dùng câu lệnh để run
     python run.py
     
