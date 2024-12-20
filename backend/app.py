@@ -85,7 +85,7 @@ async def chat_with_gpt(chat_request: ChatRequest):
     try:
         # Gửi yêu cầu tới GPT API
         response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4",
             messages=[{"role": "user", "content": chat_request.message}]
         )
         # Trả về kết quả
